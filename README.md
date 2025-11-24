@@ -4,8 +4,8 @@ ORTHOCUB: integral and  differential cubature rules by orthogonal moments: Integ
 
 In what follows, we mention the routines that are stored in this project.
 
-• cheap_startup: given the algebraic degree of precision ade, it computes a low car-
-dinality cubature rule rule_ref on the reference square [−1, 1]^2 or cube [−1, 1]^3 w.r.t.
+• cheap_startup: given the algebraic degree of precision ade, it computes a low cardinality 
+cubature rule rule_ref on the reference square [−1, 1]^2 or cube [−1, 1]^3 w.r.t.
 tensorial-Chebyshev weight (17) or (18).
 Next, calling the subroutine dCHEBVAND_orthn, it evaluates the tensorial-orthonormal
 Chebyshev basis {ψ_j}_j of total degree ade at the nodes, storing the results in the Van-
@@ -16,8 +16,8 @@ to the ADE of the reference cubature rule.
 
 • cheap_rule: given the matrix dbox of dimension 2 × d in which the i column con-
 tains the extrema of the bounding box w.r.t. the i-th variable, the moments m storing
-L(ψ j({Λ−1}(· − C))), as well as rule_ref, V_ref computed by cheap_startup, it deter-
-mines the nodes X and the weights w of the ORTHOCUB cubature rule.
+L(ψ j({Λ−1}(· − C))), as well as rule_ref, V_ref computed by cheap_startup, it determines 
+the nodes X and the weights w of the ORTHOCUB cubature rule.
 
 • dCHEBVAND_orthn evaluates the Vandermonde matrix on the set X ⊂ Ω ⊆ B, relatively to
 the scaled tensorial-Chebyshev {φ_j}_j. As input, it is requires the variable
@@ -41,8 +41,8 @@ As for the examples regarding numerical cubature, the algorithms require some ad
 • compute_spline_boundary is useful in the case of the spline-curvilinear domains. It
 provides the description of its boundary, given as inputs the abscissae of the vertices XV
 and the relative ordinates YV , a variable spline_parms storing the order of the piecewise
-splines and the vertices involved. In case the spline is cubic, spline_type fixes the addi-
-tional conditions (e.g. natural, periodic). As output, the routine supplies the vector of
+splines and the vertices involved. In case the spline is cubic, spline_type fixes the additional 
+conditions (e.g. natural, periodic). As output, the routine supplies the vector of
 structures Sx and Sy that determine the piecewise splines x = x(t), y = y(t) parametrizing
 the boundary.
 
@@ -52,8 +52,8 @@ of {φ_j}_j. This purpose is obtained by applying Green theorem, requiring the n
 integration of a certain piecewise polynomial function on the boundary.
 
 • QMC_union_balls, given the vectors of centers and radii defining the balls Bi, i =
-1, 2, . . ., computes card Halton points XB in the bounding box B of the integration do-
-main Ω = ∪_i B_i. Next, after the application of an in-domain function, provides as output
+1, 2, . . ., computes card Halton points XB in the bounding box B of the integration domain 
+Ω = ∪_i B_i. Next, after the application of an in-domain function, provides as output
 the nodes and the weights of a QMC rule in Ω.
 
 
@@ -64,8 +64,8 @@ numerical experiments above.
 
 • demo_cubature_splines illustrates the basic usage of the ORTHOCUB technique to
 approximate definite integrals on a spline-curvilinear domain Ω1 (see Figure 1).
-• demo_cubature_ade_splines, fixed a degree of precision n equal to 2, 4, . . . , 16, ap-
-proximates via the rules proposed in this work 100 integrals of random polynomials of
+• demo_cubature_ade_splines, fixed a degree of precision n equal to 2, 4, . . . , 16, approximates
+via the rules proposed in this work 100 integrals of random polynomials of
 the form
 p_n(x, y) = (c_0 + c_1 x + c_2 y)^n.
 Each exact integral is computed via Green theorem. Finally it plots the
