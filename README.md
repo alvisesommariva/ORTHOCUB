@@ -36,8 +36,7 @@ spect to a variable specified by the user of the polynomial basis {φ_k} on a sp
 3D mesh. Depending on the mesh, it is possible to define a suitable bounding box B via
 the variable dbox.
 
-As for the examples regarding numerical cubature, the algorithms require some additional func-
-tions.
+As for the examples regarding numerical cubature, the algorithms require some additional functions.
 
 • compute_spline_boundary is useful in the case of the spline-curvilinear domains. It
 provides the description of its boundary, given as inputs the abscissae of the vertices XV
